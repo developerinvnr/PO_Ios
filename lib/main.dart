@@ -38,72 +38,139 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.all(50.0),
+      body: SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text('sdf'),
-            Container(
-              height: 250,
-              width: 390,
-              child: SvgPicture.asset("assets/images/undraw_Login_re_4vu2.svg",
-                  semanticsLabel: 'Acme Logo'),
+            Column(
+              children: [
+                Text('Hello World'),
+                Container(
+                  height: 250,
+                  width: 390,
+                  child: SvgPicture.asset("assets/images/undraw_Login_re_4vu2.svg",
+                      semanticsLabel: 'Acme Logo'),
+                )
+              ],
             ),
             Container(
-              child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'LOGIN ID',
-                      style: TextStyle(
-                        color: Colors.grey,
-                      ),
+            child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text(
+                    'LOGIN ID',
+                    style: TextStyle(
+                      color: Colors.grey,
                     ),
-                    TextField(
-                      cursorColor: Colors.green,
-                      decoration: const InputDecoration(
-                          focusedBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(color: Colors.green)),
-                          enabledBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(color: Colors.green))),
+                  ),
+                  const TextField(
+                    cursorColor: Colors.green,
+                    decoration: InputDecoration(
+                        focusedBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(color: Colors.green)),
+                        enabledBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(color: Colors.green))),
+                  ),
+                  Container(
+                    margin: const EdgeInsets.only(top: 20),
+                    child: const Text(
+                      "PASSWORD",
+                      style: TextStyle(color: Colors.grey),
                     ),
-                    Container(
-                      margin: const EdgeInsets.only(top: 20),
-                      child: Text(
-                        "PASSWORD",
-                        style: TextStyle(color: Colors.grey),
-                      ),
+                  ),
+                  const TextField(
+                    cursorColor: Colors.green,
+                    decoration: InputDecoration(
+                        focusedBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(color: Colors.green)),
+                        enabledBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(color: Colors.green))),
+                  ),
+                  Container(
+                    margin: const EdgeInsets.only(top: 20),
+                    width: double.infinity,
+                    alignment: Alignment.center,
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(30.0),
+                          ),
+                          fixedSize: const Size(300, 60),
+                          primary: Colors.green,
+                          shadowColor: Colors.black),
+                      onPressed: () {},
+                      child: const Text('LOGIN'),
                     ),
-                    TextField(
-                      cursorColor: Colors.green,
-                      decoration: const InputDecoration(
-                          focusedBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(color: Colors.green)),
-                          enabledBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(color: Colors.green))),
-                    ),
-                    Container(
-                      margin: const EdgeInsets.only(top: 20),
-                      width: double.infinity,
-                      alignment: Alignment.center,
-                      child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                            shape: new RoundedRectangleBorder(
-                              borderRadius: new BorderRadius.circular(30.0),
-                            ),
-                            fixedSize: Size(300, 60),
-                            primary: Colors.green,
-                            shadowColor: Colors.black),
-                        onPressed: () {},
-                        child: Text('LOGIN'),
-                      ),
-                    )
-                  ]),
-            ),
+                  )
+                ]),
+          ),
           ],
         ),
       ),
+      
+       /* Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          const Text('SIGN IN TO CONTINUE'),
+          Container(
+            height: 250,
+            width: 390,
+            child: SvgPicture.asset("assets/images/undraw_Login_re_4vu2.svg",
+                semanticsLabel: 'Acme Logo'),
+          ),
+          Container(
+            child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text(
+                    'LOGIN ID',
+                    style: TextStyle(
+                      color: Colors.grey,
+                    ),
+                  ),
+                  const TextField(
+                    cursorColor: Colors.green,
+                    decoration: InputDecoration(
+                        focusedBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(color: Colors.green)),
+                        enabledBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(color: Colors.green))),
+                  ),
+                  Container(
+                    margin: const EdgeInsets.only(top: 20),
+                    child: const Text(
+                      "PASSWORD",
+                      style: TextStyle(color: Colors.grey),
+                    ),
+                  ),
+                  const TextField(
+                    cursorColor: Colors.green,
+                    decoration: InputDecoration(
+                        focusedBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(color: Colors.green)),
+                        enabledBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(color: Colors.green))),
+                  ),
+                  Container(
+                    margin: const EdgeInsets.only(top: 20),
+                    width: double.infinity,
+                    alignment: Alignment.center,
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(30.0),
+                          ),
+                          fixedSize: const Size(300, 60),
+                          primary: Colors.green,
+                          shadowColor: Colors.black),
+                      onPressed: () {},
+                      child: const Text('LOGIN'),
+                    ),
+                  )
+                ]),
+          ),
+        ],
+      ), */
     );
   }
 }
